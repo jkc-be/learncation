@@ -87,27 +87,15 @@
 
                     <!-- Language switcher -->
                     <div class="language-switcher">
-                        <button class="lang-button active" data-lang="en" aria-label="English">
-                            <span class="flag">🇬🇧</span>
-                        </button>
-                        <button class="lang-button" data-lang="zh-CN" aria-label="中文">
-                            <span class="flag">🇨🇳</span>
-                        </button>
-                        <button class="lang-button" data-lang="ja" aria-label="日本語">
-                            <span class="flag">🇯🇵</span>
-                        </button>
-                        <button class="lang-button" data-lang="ko" aria-label="한국어">
-                            <span class="flag">🇰🇷</span>
-                        </button>
-                        <button class="lang-button" data-lang="ms" aria-label="Bahasa">
-                            <span class="flag">🇲🇾</span>
-                        </button>
-                        <button class="lang-button" data-lang="th" aria-label="ไทย">
-                            <span class="flag">🇹🇭</span>
-                        </button>
-                        <button class="lang-button" data-lang="vi" aria-label="Tiếng Việt">
-                            <span class="flag">🇻🇳</span>
-                        </button>
+                        <select id="lang-select" class="lang-select" aria-label="Switch language">
+                            <option value="en" selected>🇬🇧 English</option>
+                            <option value="zh-CN">🇨🇳 中文</option>
+                            <option value="ja">🇯🇵 日本語</option>
+                            <option value="ko">🇰🇷 한국어</option>
+                            <option value="ms">🇲🇾 Bahasa</option>
+                            <option value="th">🇹🇭 ไทย</option>
+                            <option value="vi">🇻🇳 Tiếng Việt</option>
+                        </select>
                     </div>
                 </nav>
             </div>
