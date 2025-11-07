@@ -214,6 +214,24 @@ a:focus {
     text-align: center;
     margin-bottom: var(--space-xl);
     color: var(--color-text);
+    position: relative;
+    padding-bottom: var(--space-lg);
+}
+
+/* Dotted border divider (from original site) */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-image: repeating-linear-gradient(
+        90deg,
+        var(--color-primary),
+        var(--color-primary) 10px,
+        transparent 10px,
+        transparent 20px
+    );
+    margin: var(--space-md) auto 0;
 }
 
 .section-intro {
@@ -576,30 +594,46 @@ a:focus {
 
 .program-card {
     background: var(--color-bg);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-xl);
     overflow: hidden;
     box-shadow: var(--shadow-base);
-    transition: all var(--transition-base);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .program-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
+    transform: scale(1.1) translateY(-13px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Program card gradient backgrounds (from original site) */
+.program-hk {
+    background: linear-gradient(135deg, rgba(66, 201, 224, 0.15) 0%, rgba(66, 201, 224, 0.05) 100%);
+}
+
+.program-online {
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.15) 0%, rgba(255, 107, 107, 0.05) 100%);
 }
 
 .program-image {
     width: 100%;
-    height: 200px;
+    height: auto;
     object-fit: cover;
+    border-radius: var(--radius-base);
+}
+
+.program-image-wrapper {
+    margin: var(--space-lg) 0;
 }
 
 .program-content {
-    padding: var(--space-xl);
+    padding: var(--space-2xl);
 }
 
 .program-title {
-    color: var(--color-primary);
-    margin-bottom: var(--space-sm);
+    color: var(--color-text);
+    margin-bottom: var(--space-md);
+    font-size: var(--font-size-2xl);
+    font-family: var(--font-heading);
 }
 
 .program-duration,
@@ -650,16 +684,17 @@ a:focus {
 
 .feature-item {
     text-align: center;
-    padding: var(--space-xl);
+    padding: var(--space-2xl);
     background: var(--color-bg);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-sm);
-    transition: all var(--transition-base);
+    transition: all 0.3s ease;
 }
 
+/* Hover effect from original site: lift up -13px */
 .feature-item:hover {
-    box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    transform: translateY(-13px);
 }
 
 .feature-icon {
@@ -966,20 +1001,23 @@ a:focus {
 .form-group select,
 .form-group textarea {
     width: 100%;
-    padding: var(--space-md);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-base);
-    font-size: var(--font-size-base);
-    transition: all var(--transition-base);
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: var(--font-primary);
+    transition: border-color 0.3s ease;
     background: var(--color-bg);
 }
 
+/* Form focus effect from original site */
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    border-color: #0073e6;
+    box-shadow: none;
 }
 
 .form-group textarea {
@@ -1000,6 +1038,28 @@ a:focus {
     width: 1px;
     height: 1px;
     overflow: hidden;
+}
+
+/* Submit button styling from original site */
+button[type="submit"],
+input[type="submit"],
+.form-submit {
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-medium);
+}
+
+button[type="submit"]:hover,
+input[type="submit"]:hover,
+.form-submit:hover {
+    background-color: #005bb5;
 }
 
 #inquiry-form .btn {
