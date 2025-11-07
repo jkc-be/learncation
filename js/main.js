@@ -494,6 +494,96 @@
     }
 
     // ============================================
+    // 10. TRANSLATION SYSTEM
+    // ============================================
+
+    function initTranslations() {
+        const langSelect = document.getElementById('lang-select');
+        if (!langSelect) return;
+
+        // Load saved language or default to English
+        const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+        setLanguage(savedLang);
+
+        // Language change handler
+        langSelect.addEventListener('change', function() {
+            const selectedLang = this.value;
+            setLanguage(selectedLang);
+            localStorage.setItem('preferredLanguage', selectedLang);
+        });
+    }
+
+    function setLanguage(lang) {
+        // Update select dropdown
+        const langSelect = document.getElementById('lang-select');
+        if (langSelect) {
+            langSelect.value = lang;
+        }
+
+        // Update HTML lang attribute
+        document.documentElement.lang = lang;
+
+        // Get translation data for selected language
+        const langData = translations[lang] || translations['en'];
+
+        // Translate all elements with data-translate attribute
+        const elementsToTranslate = document.querySelectorAll('[data-translate]');
+
+        elementsToTranslate.forEach(element => {
+            const key = element.getAttribute('data-translate');
+
+            if (langData[key]) {
+                // Handle special cases for nested HTML
+                if (key === 'about_title') {
+                    element.innerHTML = langData[key].replace('Learncation', '<span class="text-highlight">Learncation</span>');
+                } else if (key === 'programs_title') {
+                    element.innerHTML = langData[key].replace('Programs', '<span class="text-highlight">Programs</span>');
+                } else if (key === 'programs_title' && element.querySelector('.text-highlight')) {
+                    // Keep the highlight span
+                    const highlightText = element.querySelector('.text-highlight').textContent;
+                    element.innerHTML = langData[key].replace(highlightText, `<span class="text-highlight">${highlightText}</span>`);
+                } else {
+                    element.textContent = langData[key];
+                }
+            }
+        });
+
+        // Handle program features (arrays)
+        translateProgramFeatures(lang);
+    }
+
+    function translateProgramFeatures(lang) {
+        const langData = translations[lang] || translations['en'];
+
+        // Check if program features exist in translation data
+        if (!langData.program_hk_features || !langData.program_online_features) {
+            return;
+        }
+
+        // Translate Hong Kong program features
+        const hkFeaturesList = document.querySelector('.program-hk .program-features');
+        if (hkFeaturesList && langData.program_hk_features) {
+            const items = hkFeaturesList.querySelectorAll('li');
+            items.forEach((item, index) => {
+                if (langData.program_hk_features[index]) {
+                    item.textContent = langData.program_hk_features[index];
+                }
+            });
+        }
+
+        // Translate Online program features
+        const onlineFeaturesList = document.querySelector('.program-online .program-features');
+        if (onlineFeaturesList && langData.program_online_features) {
+            const items = onlineFeaturesList.querySelectorAll('li');
+            items.forEach((item, index) => {
+                if (langData.program_online_features[index]) {
+                    item.textContent = langData.program_online_features[index];
+                }
+            });
+        }
+    }
+
+    // ============================================
     // INITIALIZE ALL FEATURES
     // ============================================
 
@@ -516,8 +606,9 @@
         initHeaderScroll();
         initExternalLinks();
         initScrollToTop();
+        initTranslations();
 
-        console.log('Learnoliday: All features initialized');
+        console.log('Learncation: All features initialized');
     }
 
     // Start initialization
