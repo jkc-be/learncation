@@ -78,6 +78,52 @@ The project currently contains:
 
 4. Test thoroughly before committing
 
+### GitHub Issues Workflow
+
+**All development work should be tracked through GitHub issues.**
+
+#### Creating Issues
+
+1. **Before starting any work**, check existing issues or create a new one
+2. Use clear, descriptive titles that explain the task
+3. Add appropriate labels: `enhancement`, `bug`, `documentation`, `Phase 1`, `Phase 2`, etc.
+4. Include acceptance criteria and implementation details
+5. Link related issues if applicable
+
+#### Working with Issues
+
+1. **Assign yourself** to an issue before starting work
+2. **Reference the issue** in your branch name: `feature/issue-5-enrollment-form`
+3. **Reference the issue** in commit messages: `feat: add enrollment form (fixes #5)`
+4. **Update the issue** with progress, questions, or blockers
+5. **Close issues automatically** by using keywords in commits/PRs: `fixes #5`, `closes #5`, `resolves #5`
+
+#### Issue Management Commands
+
+```bash
+# List all open issues
+gh issue list
+
+# View a specific issue
+gh issue view [issue-number]
+
+# Create a new issue
+gh issue create --title "Title" --body "Description" --label "enhancement"
+
+# Close an issue
+gh issue close [issue-number]
+
+# Assign an issue to yourself
+gh issue edit [issue-number] --add-assignee @me
+```
+
+#### Issue Lifecycle
+
+1. **Open** → Issue created and ready for work
+2. **In Progress** → Someone is actively working on it (assign yourself)
+3. **In Review** → PR submitted, awaiting review
+4. **Closed** → Work completed and merged, or issue resolved
+
 ### Code Quality Standards
 
 - Write semantic, accessible HTML
@@ -133,7 +179,12 @@ Before committing:
 
 ## Development Focus
 
-Use the TodoWrite tool to plan and track all development tasks. Break complex features into manageable steps and update progress regularly.
+**All development work is tracked through GitHub Issues.**
+
+- Check the [Issues tab](https://github.com/jkc-be/learncation/issues) for current tasks
+- Use the TodoWrite tool during active development to track sub-tasks within an issue
+- Break complex features into manageable steps
+- Update issue progress regularly with comments
 
 ## Important Notes
 
