@@ -54,31 +54,31 @@ a {
    ============================================ */
 
 :root {
-    /* Colors - Professional and trustworthy palette */
-    --color-primary: #2563eb;        /* Blue - trust, professionalism */
-    --color-primary-dark: #1e40af;
-    --color-primary-light: #3b82f6;
-    
-    --color-secondary: #10b981;      /* Green - growth, success */
-    --color-secondary-dark: #059669;
-    --color-secondary-light: #34d399;
-    
-    --color-accent: #f59e0b;         /* Orange - energy, enthusiasm */
+    /* Colors - Learncation Brand (Learn+Vacation) */
+    --color-primary: #42C9E0;        /* Cyan - vacation, adventure */
+    --color-primary-dark: #2da5bb;
+    --color-primary-light: #6fd9ec;
+
+    --color-secondary: #FF6B6B;      /* Red/Coral - learn, energy */
+    --color-secondary-dark: #ff5252;
+    --color-secondary-light: #ff8585;
+
+    --color-accent: #f59e0b;         /* Orange - excitement */
     --color-accent-dark: #d97706;
-    
+
     --color-text: #1f2937;           /* Dark gray */
     --color-text-light: #6b7280;     /* Medium gray */
     --color-text-white: #ffffff;
-    
+
     --color-bg: #ffffff;
     --color-bg-light: #f9fafb;
     --color-bg-dark: #f3f4f6;
-    
+
     --color-border: #e5e7eb;
-    
+
     --color-success: #10b981;
     --color-error: #ef4444;
-    
+
     /* Spacing Scale */
     --space-xs: 0.25rem;    /* 4px */
     --space-sm: 0.5rem;     /* 8px */
@@ -88,10 +88,12 @@ a {
     --space-2xl: 3rem;      /* 48px */
     --space-3xl: 4rem;      /* 64px */
     --space-4xl: 6rem;      /* 96px */
-    
-    /* Typography */
-    --font-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    --font-heading: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+    /* Typography - Learncation Fonts */
+    --font-primary: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-heading: 'Fredoka One', 'Open Sans', cursive, sans-serif;
+    --font-roboto-slab: 'Roboto Slab', serif;
+    --font-saira: 'Saira', sans-serif;
     
     --font-size-xs: 0.75rem;    /* 12px */
     --font-size-sm: 0.875rem;   /* 14px */
@@ -241,6 +243,27 @@ a:focus {
     left: var(--space-sm);
 }
 
+/* Utility Classes */
+.text-red {
+    color: var(--color-secondary) !important;
+}
+
+.text-cyan {
+    color: var(--color-primary) !important;
+}
+
+.text-highlight {
+    color: var(--color-primary);
+    font-weight: var(--font-weight-bold);
+}
+
+.text-large {
+    font-size: var(--font-size-xl);
+    line-height: 1.8;
+    color: var(--color-text-light);
+    margin-bottom: var(--space-lg);
+}
+
 /* ============================================
    5. Header & Navigation
    ============================================ */
@@ -322,20 +345,38 @@ a:focus {
     margin-left: var(--space-md);
 }
 
-.lang-btn {
+.lang-select {
     background: var(--color-bg-dark);
     border: 1px solid var(--color-border);
     padding: var(--space-sm) var(--space-md);
     border-radius: var(--radius-base);
     cursor: pointer;
     font-weight: var(--font-weight-medium);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
     transition: all var(--transition-base);
+    color: var(--color-text);
 }
 
-.lang-btn:hover {
-    background: var(--color-primary);
-    color: var(--color-text-white);
+.lang-select:hover {
     border-color: var(--color-primary);
+}
+
+.lang-select:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.btn-nav-cta {
+    background: var(--color-secondary);
+    color: var(--color-text-white);
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-full);
+}
+
+.btn-nav-cta:hover {
+    background: var(--color-secondary-dark);
+    transform: scale(1.05);
 }
 
 /* ============================================
@@ -398,36 +439,57 @@ a:focus {
    ============================================ */
 
 .hero-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
     color: var(--color-text-white);
     padding: var(--space-4xl) 0;
-    min-height: 500px;
+    min-height: 600px;
     display: flex;
     align-items: center;
+    text-align: center;
 }
 
 .hero-section .container {
-    display: grid;
-    gap: var(--space-2xl);
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: var(--space-xl);
 }
 
 .hero-content {
     text-align: center;
+    max-width: 800px;
+}
+
+.hero-logo {
+    margin-bottom: var(--space-lg);
+}
+
+.hero-logo img {
+    width: auto;
+    height: auto;
+    max-width: 200px;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .hero-title {
     font-size: var(--font-size-4xl);
+    font-family: var(--font-heading);
     color: var(--color-text-white);
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-md);
     line-height: var(--line-height-tight);
 }
 
 .hero-subtitle {
     font-size: var(--font-size-xl);
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.95);
     margin-bottom: var(--space-2xl);
     line-height: var(--line-height-relaxed);
+    font-weight: var(--font-weight-medium);
 }
 
 .hero-cta {
@@ -725,7 +787,101 @@ a:focus {
 }
 
 /* ============================================
-   13. Contact Section
+   13. Book Now Section
+   ============================================ */
+
+.book-section {
+    padding: var(--space-4xl) 0;
+    background: linear-gradient(135deg, rgba(66, 201, 224, 0.1) 0%, rgba(255, 107, 107, 0.1) 100%);
+}
+
+.book-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xl);
+}
+
+.book-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-xl);
+}
+
+.book-option {
+    background: var(--color-bg);
+    padding: var(--space-2xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    transition: transform var(--transition-base);
+}
+
+.book-option:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.book-option h3 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-md);
+    color: var(--color-text);
+}
+
+.book-option p {
+    color: var(--color-text-light);
+    margin-bottom: var(--space-lg);
+    font-size: var(--font-size-lg);
+}
+
+.book-info {
+    background: var(--color-bg);
+    padding: var(--space-2xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
+}
+
+.book-info h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-lg);
+    text-align: center;
+}
+
+.booking-steps {
+    max-width: 600px;
+    margin: 0 auto;
+    counter-reset: step-counter;
+    list-style: none;
+    padding: 0;
+}
+
+.booking-steps li {
+    padding-left: var(--space-xl);
+    margin-bottom: var(--space-md);
+    position: relative;
+    font-size: var(--font-size-lg);
+    line-height: 1.8;
+}
+
+.booking-steps li::before {
+    content: counter(step-counter);
+    counter-increment: step-counter;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    background: var(--color-secondary);
+    color: var(--color-text-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-sm);
+}
+
+/* ============================================
+   14. Contact Section
    ============================================ */
 
 .contact-section {
