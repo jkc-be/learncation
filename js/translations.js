@@ -12,6 +12,7 @@ const translations = {
         nav_why_us: "Why Us",
         nav_faq: "FAQ",
         nav_book: "Book Now",
+        nav_contact: "Contact",
 
         // Hero
         hero_title: "Learn English. Explore the World",
@@ -157,6 +158,7 @@ const translations = {
         nav_why_us: "为什么选择我们",
         nav_faq: "常见问题",
         nav_book: "立即预订",
+        nav_contact: "联系我们",
 
         // Hero
         hero_title: "学英语·探世界",
