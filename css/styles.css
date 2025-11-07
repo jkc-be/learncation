@@ -344,6 +344,7 @@ a:focus {
     display: flex;
     gap: var(--space-lg);
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .nav-link {
@@ -360,7 +361,6 @@ a:focus {
 }
 
 .language-switcher {
-    margin-left: var(--space-md);
     display: flex;
     gap: var(--space-xs);
     align-items: center;
@@ -1198,14 +1198,16 @@ input[type="submit"]:hover,
     .container {
         --container-padding: var(--space-xl);
     }
-    
+
     /* Show desktop navigation */
     .mobile-menu-toggle {
         display: none;
     }
-    
+
     .main-nav {
-        display: block;
+        display: flex;
+        align-items: center;
+        gap: var(--space-lg);
     }
     
     /* Hero */
