@@ -124,6 +124,41 @@ gh issue edit [issue-number] --add-assignee @me
 3. **In Review** → PR submitted, awaiting review
 4. **Closed** → Work completed and merged, or issue resolved
 
+### Milestones Workflow
+
+**Milestones group related issues together to track progress toward major goals.**
+
+#### Current Milestones
+
+**MVP - Minimum Viable Product** (Milestone #2)
+- Launch-ready website with core functionality
+- Includes all Phase 1 issues (#4-8)
+- Target: Clean landing page, mobile-responsive, contact form
+- Success: Lighthouse > 90, works on all devices, ready for marketing
+
+#### Working with Milestones
+
+```bash
+# List all milestones
+gh api repos/jkc-be/learncation/milestones
+
+# View milestone progress
+gh issue list --milestone "MVP - Minimum Viable Product"
+
+# Add issue to milestone (use milestone number)
+gh api repos/jkc-be/learncation/issues/[issue-number] -X PATCH -f milestone=2
+
+# View milestone on GitHub
+# https://github.com/jkc-be/learncation/milestone/2
+```
+
+#### Milestone Best Practices
+
+1. **Focus on MVP first** - Complete all MVP issues before moving to Phase 2
+2. **Track progress** - Regularly check milestone completion percentage
+3. **Update estimates** - Adjust time estimates based on actual progress
+4. **Celebrate completion** - When milestone is done, review and celebrate!
+
 ### Code Quality Standards
 
 - Write semantic, accessible HTML
@@ -179,12 +214,25 @@ Before committing:
 
 ## Development Focus
 
-**All development work is tracked through GitHub Issues.**
+**All development work is tracked through GitHub Issues and Milestones.**
+
+### Current Focus: MVP Milestone
+
+We are currently working on the **MVP - Minimum Viable Product** milestone.
+
+- **View MVP Progress**: [Milestone #2](https://github.com/jkc-be/learncation/milestone/2)
+- **MVP Issues**: #4, #5, #6, #7, #8 (Phase 1 tasks)
+- **Goal**: Launch-ready website with core functionality
+- **Next Steps**: Start with Issue #4 (HTML structure)
+
+### Workflow
 
 - Check the [Issues tab](https://github.com/jkc-be/learncation/issues) for current tasks
+- Filter by milestone to see MVP-specific issues
 - Use the TodoWrite tool during active development to track sub-tasks within an issue
 - Break complex features into manageable steps
 - Update issue progress regularly with comments
+- Track overall progress via the [MVP Milestone](https://github.com/jkc-be/learncation/milestone/2)
 
 ## Important Notes
 
