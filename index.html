@@ -87,15 +87,27 @@
 
                     <!-- Language switcher -->
                     <div class="language-switcher">
-                        <select id="lang-select" class="lang-select" aria-label="Switch language">
-                            <option value="en" selected>English</option>
-                            <option value="zh-CN">中文</option>
-                            <option value="ja">日本語</option>
-                            <option value="ko">한국어</option>
-                            <option value="ms">Bahasa</option>
-                            <option value="th">ไทย</option>
-                            <option value="vi">Tiếng Việt</option>
-                        </select>
+                        <button class="lang-button active" data-lang="en" aria-label="English">
+                            <span class="flag">🇬🇧</span>
+                        </button>
+                        <button class="lang-button" data-lang="zh-CN" aria-label="中文">
+                            <span class="flag">🇨🇳</span>
+                        </button>
+                        <button class="lang-button" data-lang="ja" aria-label="日本語">
+                            <span class="flag">🇯🇵</span>
+                        </button>
+                        <button class="lang-button" data-lang="ko" aria-label="한국어">
+                            <span class="flag">🇰🇷</span>
+                        </button>
+                        <button class="lang-button" data-lang="ms" aria-label="Bahasa">
+                            <span class="flag">🇲🇾</span>
+                        </button>
+                        <button class="lang-button" data-lang="th" aria-label="ไทย">
+                            <span class="flag">🇹🇭</span>
+                        </button>
+                        <button class="lang-button" data-lang="vi" aria-label="Tiếng Việt">
+                            <span class="flag">🇻🇳</span>
+                        </button>
                     </div>
                 </nav>
             </div>
@@ -109,9 +121,6 @@
         <section id="home" class="hero-section">
             <div class="container">
                 <div class="hero-content">
-                    <div class="hero-logo">
-                        <img src="https://learn-cation.com/wp-content/uploads/2025/10/logo-learn.png" alt="Learncation Logo" width="200" height="200">
-                    </div>
                     <h1 class="hero-title">Learn English. Explore the World</h1>
                     <p class="hero-subtitle">Starting in Hong Kong and online!</p>
                     <div class="hero-cta">
@@ -190,55 +199,61 @@
         <!-- Why Choose Us Section -->
         <section id="why-us" class="why-us-section">
             <div class="container">
-                <h2 class="section-title">Why Choose Learnoliday?</h2>
-                
+                <h2 class="section-title">Why Choose <span class="text-highlight">Learncation?</span></h2>
+
                 <div class="features-grid">
                     <div class="feature-item">
-                        <div class="feature-icon">
-                            <img src="images/icon-quality.svg" alt="" width="64" height="64" aria-hidden="true">
+                        <div class="feature-emoji">🗣️</div>
+                        <div class="feature-image">
+                            <img src="https://learn-cation.com/wp-content/uploads/2025/10/68f896668fd27334db842c8b_1761121967050_29d2cdc5.webp" alt="Confidence in Speaking" loading="lazy">
                         </div>
-                        <h3>Qualified Instructors</h3>
-                        <p>All our teachers are certified English language instructors with extensive experience teaching children.</p>
+                        <h3>Confidence in Speaking</h3>
+                        <p>Build fluency through real conversations and interactive activities</p>
                     </div>
-                    
+
                     <div class="feature-item">
-                        <div class="feature-icon">
-                            <img src="images/icon-safety.svg" alt="" width="64" height="64" aria-hidden="true">
+                        <div class="feature-emoji">🌏</div>
+                        <div class="feature-image">
+                            <img src="https://learn-cation.com/wp-content/uploads/2025/10/68f896668fd27334db842c8b_1761121969103_95c23883.webp" alt="Cultural Experience" loading="lazy">
                         </div>
-                        <h3>Safety First</h3>
-                        <p>Your child's safety is our top priority. We maintain strict supervision ratios and comprehensive safety protocols.</p>
+                        <h3>Cultural Experience</h3>
+                        <p>Experience Hong Kong culture while practicing English in authentic settings</p>
                     </div>
-                    
+
                     <div class="feature-item">
-                        <div class="feature-icon">
-                            <img src="images/icon-immersion.svg" alt="" width="64" height="64" aria-hidden="true">
+                        <div class="feature-emoji">👨‍🏫</div>
+                        <div class="feature-image">
+                            <img src="https://learn-cation.com/wp-content/uploads/2025/10/68f896668fd27334db842c8b_1761121970821_db3b8c53.webp" alt="Native Teachers" loading="lazy">
                         </div>
-                        <h3>Full Immersion</h3>
-                        <p>Our programs create an English-only environment that accelerates language acquisition naturally.</p>
+                        <h3>Native Teachers</h3>
+                        <p>Learn from experienced native English speakers who make lessons fun and engaging</p>
                     </div>
-                    
+
                     <div class="feature-item">
-                        <div class="feature-icon">
-                            <img src="images/icon-fun.svg" alt="" width="64" height="64" aria-hidden="true">
+                        <div class="feature-emoji">🎮</div>
+                        <div class="feature-image">
+                            <img src="https://learn-cation.com/wp-content/uploads/2025/10/68f896668fd27334db842c8b_1761121972647_ca2dc02e.webp" alt="Interactive Learning" loading="lazy">
                         </div>
-                        <h3>Learning Through Fun</h3>
-                        <p>We believe children learn best when they're engaged and having fun. Our activities make learning enjoyable.</p>
+                        <h3>Interactive Learning</h3>
+                        <p>Games, activities, and hands-on experiences that make English learning exciting</p>
                     </div>
-                    
+
                     <div class="feature-item">
-                        <div class="feature-icon">
-                            <img src="images/icon-groups.svg" alt="" width="64" height="64" aria-hidden="true">
+                        <div class="feature-emoji">👥</div>
+                        <div class="feature-image">
+                            <img src="https://learn-cation.com/wp-content/uploads/2025/10/68f896668fd27334db842c8b_1761121974412_ba96bbf5.webp" alt="Small Groups" loading="lazy">
                         </div>
-                        <h3>Small Class Sizes</h3>
-                        <p>With small groups, each child receives personalized attention and plenty of speaking practice.</p>
+                        <h3>Small Groups</h3>
+                        <p>Maximum 8-12 students per class for personalized attention and practice</p>
                     </div>
-                    
+
                     <div class="feature-item">
-                        <div class="feature-icon">
-                            <img src="images/icon-international.svg" alt="" width="64" height="64" aria-hidden="true">
+                        <div class="feature-emoji">🏆</div>
+                        <div class="feature-image">
+                            <img src="https://learn-cation.com/wp-content/uploads/2025/10/68f896668fd27334db842c8b_1761121976254_76acb50a.webp" alt="Proven Results" loading="lazy">
                         </div>
-                        <h3>International Environment</h3>
-                        <p>Children interact with peers from around the world, building global friendships and cultural awareness.</p>
+                        <h3>Proven Results</h3>
+                        <p>Measurable improvement in speaking, listening, and confidence after each program</p>
                     </div>
                 </div>
             </div>
