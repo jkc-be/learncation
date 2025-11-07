@@ -1,20 +1,27 @@
-# Learncation - Claude Code Development Guide
+# Learnoliday - Claude Code Development Guide
 
 ## Project Overview
 
-**Learncation** is a website platform for parents to enroll their children in English learning holidays (learnolidays/learncations). The site provides information about English immersion programs and facilitates enrollment.
+**Learnoliday** is a website platform for parents to enroll their children in English learning holidays (learnolidays/learncations). The site provides information about English immersion programs and facilitates enrollment.
 
 **Current Stack:**
-- Static HTML website (WordPress-generated)
+- Minimal HTML/CSS/JavaScript setup (no frameworks)
 - Target URL: https://learnoliday.com
+- Goal: Clean, lightweight, fast-loading website
 
 ## Project Goal
 
-Create a comprehensive web platform that allows:
-- Parents to view available English learning holiday programs
-- Easy enrollment process for children
-- Program information display (dates, locations, activities)
-- Contact and inquiry management
+Recreate the current landing page with a minimal setup:
+- **No WordPress dependencies** - clean, standalone HTML
+- **Minimal external dependencies** - keep it lightweight
+- **Modern, responsive design** - mobile-first approach
+- **Fast loading** - optimized assets and clean code
+
+Core features:
+- Landing page with program information
+- Enrollment inquiry form
+- Contact information
+- Multilingual support (EN primary, with support for Chinese markets)
 
 ## Development Instructions
 
@@ -29,17 +36,23 @@ Create a comprehensive web platform that allows:
 ### Current State
 
 The project currently contains:
-- `learn-cation-simple.html` - Main landing page (WordPress export)
+- `learn-cation-source/` - Original website files (reference only)
+- `learn-cation-simple.html` - Simplified HTML export (reference)
 
-### Next Steps for Development
+### Development Approach
 
-Potential development tasks:
-1. Convert static HTML to a dynamic web application
-2. Implement enrollment system with database
-3. Create admin panel for managing programs
-4. Add contact forms and inquiry management
-5. Implement multilingual support (EN, NL, FR for Belgian market)
-6. Add payment integration for enrollment fees
+**Phase 1: Minimal Recreation**
+1. Create clean, minimal HTML structure
+2. Add essential CSS (modern, lightweight)
+3. Implement basic JavaScript for interactivity
+4. Ensure mobile-responsive design
+5. Add simple contact/inquiry form
+
+**Phase 2: Enhancement (Future)**
+1. Implement multilingual support (EN primary, Chinese for HK/China market)
+2. Add dynamic content management
+3. Create enrollment system with backend
+4. Integrate payment processing (international gateways)
 
 ### Git Workflow
 
@@ -94,30 +107,28 @@ Before committing:
 5. Test accessibility with screen readers
 6. Verify all links work correctly
 
-## Technology Stack Recommendations
+## Technology Stack
 
-When expanding beyond static HTML:
+**Current (Minimal Setup):**
+- Pure HTML5 for structure
+- Vanilla CSS3 for styling (CSS Grid, Flexbox)
+- Vanilla JavaScript for interactivity
+- No build tools required
+- No external frameworks or libraries (except essential form handling)
 
-**Backend Options:**
-- Python: FastAPI or Django
-- Node.js: Express or NestJS
-- PHP: Laravel
-
-**Frontend:**
-- Modern JavaScript framework (React, Vue, or keep vanilla JS)
-- Tailwind CSS or Bootstrap for styling
-
-**Database:**
-- PostgreSQL for relational data
-- MySQL as alternative
+**Future Expansion:**
+- Backend: Python FastAPI (lightweight, modern)
+- Database: PostgreSQL when needed
+- Keep frontend minimal unless complexity requires framework
 
 **Hosting:**
-- Current: WordPress hosting
-- Future: VPS, AWS, or similar cloud hosting
+- Static site hosting (Netlify, Vercel, GitHub Pages)
+- CDN for fast global delivery
+- Simple deployment process
 
 ## Contact Information
 
-- Website: https://learn-cation.com
+- Website: https://learnoliday.com
 - GitHub: https://github.com/jkc-be/learncation
 
 ## Development Focus
@@ -126,11 +137,13 @@ Use the TodoWrite tool to plan and track all development tasks. Break complex fe
 
 ## Important Notes
 
-- This is a Belgian business targeting Dutch, French, and English-speaking markets
+- **Target Markets:** Africa and Hong Kong/China
 - English immersion is the core value proposition
 - User experience should be parent-friendly and professional
 - Child safety and program quality should be prominently featured
-- Consider GDPR compliance for data handling (EU regulations)
+- Consider international data privacy regulations
+- Design should be culturally appropriate for target markets
+- Currency and payment options for international customers
 
 ---
 
