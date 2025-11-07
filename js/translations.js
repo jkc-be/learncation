@@ -67,25 +67,84 @@ const translations = {
         feature_results_title: "Proven Results",
         feature_results_desc: "Measurable improvement in speaking, listening, and confidence after each program",
 
+        // Programs (actual page content)
+        programs_page_title: "Our Products",
+        program_hk_page_title: "🏝️ Hong Kong English Adventure",
+        program_hk_page_desc: "Explore Victoria Harbor & cultural landmarks",
+        program_hk_feature_1: "✓ Explore Victoria Harbor & cultural landmarks",
+        program_hk_feature_2: "✓ Team-building games in English",
+        program_hk_feature_3: "✓ Local food adventures & storytelling",
+        program_hk_feature_4: "✓ Ages 7-14 | 5-day immersive experience",
+
+        program_online_page_title: "💻 Online English Bootcamp",
+        program_online_page_desc: "Interactive online classes from anywhere",
+        program_online_feature_1: "✓ Live classes with native English teachers",
+        program_online_feature_2: "✓ Fun activities, games & storytelling",
+        program_online_feature_3: "✓ Small groups for personalized attention",
+        program_online_feature_4: "✓ Flexible schedules | Join from home",
+
         // Testimonials
         testimonials_title: "What Parents Say",
+        testimonial_1_text: "My daughter attended the summer program and came back speaking English with so much more confidence. The teachers were excellent and she made friends from all over the world!",
+        testimonial_1_name: "Sarah L.",
+        testimonial_1_location: "Hong Kong",
+        testimonial_2_text: "A fantastic experience! The program was well-organized, safe, and most importantly, my son had a great time while improving his English significantly.",
+        testimonial_2_name: "James M.",
+        testimonial_2_location: "Lagos, Nigeria",
+        testimonial_3_text: "The perfect balance of education and fun. My children have attended three times now and always want to go back. Highly recommended!",
+        testimonial_3_name: "Li Wei",
+        testimonial_3_location: "Shanghai, China",
+
+        // Book Now
+        book_title: "Ready to Start Your Adventure?",
+        book_intro: "Join us for an unforgettable English learning experience!",
+        book_hk_title: "🏝️ Hong Kong Adventure",
+        book_hk_desc: "5-day immersive experience in Hong Kong",
+        book_hk_button: "Book Hong Kong Camp",
+        book_online_title: "💻 Online Bootcamp",
+        book_online_desc: "Join from anywhere in the world",
+        book_online_button: "Book Online Class",
+        book_info_title: "What Happens Next?",
+        book_step_1: "Fill out the contact form below",
+        book_step_2: "We'll reach out within 24 hours",
+        book_step_3: "Schedule a FREE consultation call",
+        book_step_4: "Choose your program and dates",
+        book_step_5: "Start your learning adventure!",
 
         // FAQ
         faq_title: "Frequently Asked Questions",
+        faq_q1: "What age groups do you accept?",
+        faq_a1: "We accept children aged 8-17 years. Programs are divided into age-appropriate groups to ensure optimal learning and social experiences.",
+        faq_q2: "What is the teacher-to-student ratio?",
+        faq_a2: "We maintain a maximum ratio of 1 teacher to 12 students in classes, and 1 supervisor to 8 students during activities, ensuring personalized attention and safety.",
+        faq_q3: "What English level is required?",
+        faq_a3: "We welcome children of all English levels, from beginners to advanced. We conduct placement assessments to ensure each child is in the appropriate class.",
+        faq_q4: "Where are the programs held?",
+        faq_a4: "Our programs are held in Belgium, in a safe and beautiful location with modern facilities and easy access to cultural sites.",
+        faq_q5: "What is included in the program fee?",
+        faq_a5: "The fee includes English lessons, accommodation, all meals, activities, excursions, supervision, and course materials. Airport transfers can be arranged for an additional fee.",
+        faq_q6: "How do I enroll my child?",
+        faq_a6: "Complete the inquiry form below and we'll contact you with detailed information about available programs and the enrollment process.",
 
-        // Book Now
-        book_title: "Ready to Start?",
-        book_hk_title: "Hong Kong Camp",
-        book_hk_desc: "Join our summer adventure in Hong Kong",
-        book_online_title: "Online Classes",
-        book_online_desc: "Learn English from anywhere in the world",
-        book_info_title: "How to Book",
+        // About
+        about_page_title: "About Learncation",
+        about_heading: "Where Learning Meets Adventure",
+        about_p1: "Learncation combines Learn + Vacation to create unforgettable English learning experiences for young learners across Asia.",
+        about_p2: "Our Hong Kong-based immersive camps let kids practice English through cultural tours, teamwork activities, and exciting games in one of Asia's most vibrant cities.",
+        about_p3: "Can't travel? Join our fun online bootcamps with live, interactive lessons led by engaging native English teachers from anywhere in the world!",
 
         // Contact
         contact_title: "Get in Touch",
+        contact_intro: "Have questions or ready to enroll? We're here to help!",
+        contact_info_title: "Contact Information",
+        contact_form_title: "Send us a Message",
+        contact_email: "Email:",
+        contact_phone: "Phone:",
+        contact_address: "Address:",
 
         // Common
         learn_more: "Learn More",
+        start_now: "Start Now",
         book_now: "Book Now",
         contact_us: "Contact Us"
     },
@@ -153,25 +212,84 @@ const translations = {
         feature_results_title: "经验证的成果",
         feature_results_desc: "每个课程后在口语、听力和自信心方面都有可衡量的提高",
 
+        // Programs (actual page content)
+        programs_page_title: "我们的产品",
+        program_hk_page_title: "🏝️ 香港英语冒险",
+        program_hk_page_desc: "探索维多利亚港和文化地标",
+        program_hk_feature_1: "✓ 探索维多利亚港和文化地标",
+        program_hk_feature_2: "✓ 英语团队建设游戏",
+        program_hk_feature_3: "✓ 本地美食冒险和讲故事",
+        program_hk_feature_4: "✓ 7-14岁 | 5天沉浸式体验",
+
+        program_online_page_title: "💻 在线英语训练营",
+        program_online_page_desc: "随时随地进行互动在线课程",
+        program_online_feature_1: "✓ 与英语母语教师进行现场课程",
+        program_online_feature_2: "✓ 有趣的活动、游戏和讲故事",
+        program_online_feature_3: "✓ 小组个性化关注",
+        program_online_feature_4: "✓ 灵活的时间表 | 在家参加",
+
         // Testimonials
         testimonials_title: "家长评价",
+        testimonial_1_text: "我的女儿参加了暑期项目，回来后说英语时自信心大大增强。老师非常优秀，她结交了来自世界各地的朋友！",
+        testimonial_1_name: "Sarah L.",
+        testimonial_1_location: "香港",
+        testimonial_2_text: "很棒的体验！该项目组织良好、安全，最重要的是，我儿子玩得很开心，同时英语水平显著提高。",
+        testimonial_2_name: "James M.",
+        testimonial_2_location: "尼日利亚拉各斯",
+        testimonial_3_text: "教育和乐趣的完美平衡。我的孩子们已经参加了三次，总是想再回去。强烈推荐！",
+        testimonial_3_name: "李伟",
+        testimonial_3_location: "中国上海",
+
+        // Book Now
+        book_title: "准备开始您的冒险了吗？",
+        book_intro: "加入我们，享受难忘的英语学习体验！",
+        book_hk_title: "🏝️ 香港冒险",
+        book_hk_desc: "香港5天沉浸式体验",
+        book_hk_button: "预订香港夏令营",
+        book_online_title: "💻 在线训练营",
+        book_online_desc: "在世界任何地方参加",
+        book_online_button: "预订在线课程",
+        book_info_title: "接下来会发生什么？",
+        book_step_1: "填写下面的联系表格",
+        book_step_2: "我们将在24小时内与您联系",
+        book_step_3: "安排免费咨询电话",
+        book_step_4: "选择您的课程和日期",
+        book_step_5: "开始您的学习冒险！",
 
         // FAQ
         faq_title: "常见问题",
+        faq_q1: "你们接受哪些年龄段？",
+        faq_a1: "我们接受8-17岁的儿童。课程按年龄分组，以确保最佳的学习和社交体验。",
+        faq_q2: "师生比例是多少？",
+        faq_a2: "我们在课堂上保持最多1名教师对12名学生的比例，在活动期间保持1名监督员对8名学生的比例，确保个性化关注和安全。",
+        faq_q3: "需要什么英语水平？",
+        faq_a3: "我们欢迎所有英语水平的儿童，从初学者到高级。我们进行分级评估，以确保每个孩子都在适当的班级中。",
+        faq_q4: "课程在哪里举行？",
+        faq_a4: "我们的课程在比利时举行，在一个安全而美丽的地方，拥有现代化的设施和便捷的文化景点。",
+        faq_q5: "课程费用包括什么？",
+        faq_a5: "费用包括英语课程、住宿、所有餐食、活动、游览、监督和课程材料。机场接送可额外安排。",
+        faq_q6: "我如何为孩子报名？",
+        faq_a6: "填写下面的查询表格，我们将与您联系，提供有关可用课程和注册流程的详细信息。",
 
-        // Book Now
-        book_title: "准备开始了吗？",
-        book_hk_title: "香港夏令营",
-        book_hk_desc: "加入我们在香港的夏季冒险",
-        book_online_title: "在线课程",
-        book_online_desc: "在世界任何地方学习英语",
-        book_info_title: "如何预订",
+        // About
+        about_page_title: "关于Learncation",
+        about_heading: "学习与冒险相遇的地方",
+        about_p1: "Learncation将学习+假期结合起来，为亚洲的年轻学习者创造难忘的英语学习体验。",
+        about_p2: "我们在香港的沉浸式夏令营让孩子们通过文化游览、团队活动和刺激的游戏在亚洲最具活力的城市之一练习英语。",
+        about_p3: "不能旅行？加入我们有趣的在线训练营，由经验丰富的英语母语教师主持的现场互动课程，您可以在世界任何地方参加！",
 
         // Contact
         contact_title: "联系我们",
+        contact_intro: "有疑问或准备报名？我们随时为您提供帮助！",
+        contact_info_title: "联系信息",
+        contact_form_title: "给我们留言",
+        contact_email: "电子邮件：",
+        contact_phone: "电话：",
+        contact_address: "地址：",
 
         // Common
         learn_more: "了解更多",
+        start_now: "立即开始",
         book_now: "立即预订",
         contact_us: "联系我们"
     },
